@@ -1,0 +1,562 @@
+{
+	"info": {
+		"_postman_id": "1145f4da-e22c-4d83-9878-5a76e05db995",
+		"name": "lifestyle-demo-local",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get entries of a space",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/spaces/{{space_id}}/environments/{{environment_id}}/entries?access_token={{access_token}}",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"spaces",
+						"{{space_id}}",
+						"environments",
+						"{{environment_id}}",
+						"entries"
+					],
+					"query": [
+						{
+							"key": "access_token",
+							"value": "{{access_token}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get published topic articles",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/spaces/{{space_id}}/environments/{{environment_id}}/entries?access_token={{access_token}}&content_type=topicArticle",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"spaces",
+						"{{space_id}}",
+						"environments",
+						"{{environment_id}}",
+						"entries"
+					],
+					"query": [
+						{
+							"key": "access_token",
+							"value": "{{access_token}}"
+						},
+						{
+							"key": "content_type",
+							"value": "topicArticle"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get published and draft topic articles",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{preview_url}}/spaces/{{space_id}}/environments/{{environment_id}}/entries?access_token={{preview_token}}&content_type=topicArticle",
+					"host": [
+						"{{preview_url}}"
+					],
+					"path": [
+						"spaces",
+						"{{space_id}}",
+						"environments",
+						"{{environment_id}}",
+						"entries"
+					],
+					"query": [
+						{
+							"key": "access_token",
+							"value": "{{preview_token}}"
+						},
+						{
+							"key": "content_type",
+							"value": "topicArticle"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get specific entry",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/spaces/{{space_id}}/environments/{{environment_id}}/entries/{{entry_id}}?access_token={{access_token}}",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"spaces",
+						"{{space_id}}",
+						"environments",
+						"{{environment_id}}",
+						"entries",
+						"{{entry_id}}"
+					],
+					"query": [
+						{
+							"key": "access_token",
+							"value": "{{access_token}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get specific content type",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/spaces/{{space_id}}/environments/{{environment_id}}/entries?access_token={{access_token}}&content_type={{content_type}}",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"spaces",
+						"{{space_id}}",
+						"environments",
+						"{{environment_id}}",
+						"entries"
+					],
+					"query": [
+						{
+							"key": "access_token",
+							"value": "{{access_token}}"
+						},
+						{
+							"key": "content_type",
+							"value": "{{content_type}}",
+							"description": "componentCardCollection"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get image",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{image_url}}/{{space_id}}/{{asset_id}}/{{image_token}}/photo-1509517857811-6b00324f5248",
+					"host": [
+						"{{image_url}}"
+					],
+					"path": [
+						"{{space_id}}",
+						"{{asset_id}}",
+						"{{image_token}}",
+						"photo-1509517857811-6b00324f5248"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get scaled image",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{image_url}}/{{space_id}}/{{asset_id}}/{{image_token}}/photo-1509517857811-6b00324f5248?w=600",
+					"host": [
+						"{{image_url}}"
+					],
+					"path": [
+						"{{space_id}}",
+						"{{asset_id}}",
+						"{{image_token}}",
+						"photo-1509517857811-6b00324f5248"
+					],
+					"query": [
+						{
+							"key": "w",
+							"value": "600"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get cropped image",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{image_url}}/{{space_id}}/{{asset_id}}/{{image_token}}/photo-1509517857811-6b00324f5248?fit=crop&w=100&h=100",
+					"host": [
+						"{{image_url}}"
+					],
+					"path": [
+						"{{space_id}}",
+						"{{asset_id}}",
+						"{{image_token}}",
+						"photo-1509517857811-6b00324f5248"
+					],
+					"query": [
+						{
+							"key": "fit",
+							"value": "crop"
+						},
+						{
+							"key": "w",
+							"value": "100"
+						},
+						{
+							"key": "h",
+							"value": "100"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get optimised Image ",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{image_url}}/{{space_id}}/{{asset_id}}/{{image_token}}/photo-1509517857811-6b00324f5248?w=1500&h=1400&q=90&fm=webp",
+					"host": [
+						"{{image_url}}"
+					],
+					"path": [
+						"{{space_id}}",
+						"{{asset_id}}",
+						"{{image_token}}",
+						"photo-1509517857811-6b00324f5248"
+					],
+					"query": [
+						{
+							"key": "w",
+							"value": "1500"
+						},
+						{
+							"key": "h",
+							"value": "1400"
+						},
+						{
+							"key": "q",
+							"value": "90"
+						},
+						{
+							"key": "fm",
+							"value": "webp"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create entry CMA",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "CFPAT-xIR9DGLCnXFNzzpOi4sk_QIAFKouodUebWRn92l6Lg4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-type",
+						"value": "application/vnd.contentful.management.v1+json",
+						"type": "text"
+					},
+					{
+						"key": "X-Contentful-Content-Type",
+						"value": "topicQuestion2",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"fields\": {\n        \"question\": {\n            \"en-US\": \"What is your return period? part 2\"\n        },\n        \"answer\": {\n            \"en-US\": \"If you have purchased on bang.olufsen.com and wish to return your product for a refund, you may do so within 30 days of receipt of your order part 2\"\n        }\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{cma_url}}/spaces/{{space_id}}/environments/{{environment_id}}/entries/topicQuestion2",
+					"host": [
+						"{{cma_url}}"
+					],
+					"path": [
+						"spaces",
+						"{{space_id}}",
+						"environments",
+						"{{environment_id}}",
+						"entries",
+						"topicQuestion2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Publish entry CMA",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "CFPAT-xIR9DGLCnXFNzzpOi4sk_QIAFKouodUebWRn92l6Lg4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "X-Contentful-Version",
+						"value": "1",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{cma_url}}/spaces/{{space_id}}/environments/{{environment_id}}/entries/topicQuestion2/published",
+					"host": [
+						"{{cma_url}}"
+					],
+					"path": [
+						"spaces",
+						"{{space_id}}",
+						"environments",
+						"{{environment_id}}",
+						"entries",
+						"topicQuestion2",
+						"published"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get entries of a space GraphQL",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://graphql.contentful.com/content/v1/spaces//{{space_id}}/environments/{{environment_id}}?access_token={{access_token}}&query=query{topicArticleCollection{items{sys{id}title,shortDescription,publishedDate,featuredImage{fileName,url}intro,body{json}authorCollection(limit:1){items{name,avatar{fileName,url}}}}}}",
+					"protocol": "https",
+					"host": [
+						"graphql",
+						"contentful",
+						"com"
+					],
+					"path": [
+						"content",
+						"v1",
+						"spaces",
+						"",
+						"{{space_id}}",
+						"environments",
+						"{{environment_id}}"
+					],
+					"query": [
+						{
+							"key": "access_token",
+							"value": "{{access_token}}"
+						},
+						{
+							"key": "query",
+							"value": "query{topicArticleCollection{items{sys{id}title,shortDescription,publishedDate,featuredImage{fileName,url}intro,body{json}authorCollection(limit:1){items{name,avatar{fileName,url}}}}}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get entries of a space with REST",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/spaces/{{space_id}}/environments/{{environment_id}}/entries?access_token={{access_token}}",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"spaces",
+						"{{space_id}}",
+						"environments",
+						"{{environment_id}}",
+						"entries"
+					],
+					"query": [
+						{
+							"key": "access_token",
+							"value": "{{access_token}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "graphQL explore",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://graphql.contentful.com/content/v1/spaces/{{space_id}}/explore?access_token={{access_token}}",
+					"protocol": "https",
+					"host": [
+						"graphql",
+						"contentful",
+						"com"
+					],
+					"path": [
+						"content",
+						"v1",
+						"spaces",
+						"{{space_id}}",
+						"explore"
+					],
+					"query": [
+						{
+							"key": "access_token",
+							"value": "{{access_token}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ecommerce landingpage",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/spaces/r0u4kof55cds/environments/master/entries/{{entry_id}}?access_token={{access_token}}",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"spaces",
+						"r0u4kof55cds",
+						"environments",
+						"master",
+						"entries",
+						"{{entry_id}}"
+					],
+					"query": [
+						{
+							"key": "access_token",
+							"value": "{{access_token}}"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "space_id",
+			"value": "obu28vvrzs99"
+		},
+		{
+			"key": "environment_id",
+			"value": "master"
+		},
+		{
+			"key": "access_token",
+			"value": "a8v1uGnbePlth6dRQmcWdZRUBrE52MBVX3p2uFqZmuc"
+		},
+		{
+			"key": "preview_token",
+			"value": "Hi9juabV1h4C2QO1A3ke19-nk6elkbvS33OaLZQYdGM"
+		},
+		{
+			"key": "base_url",
+			"value": "https://cdn.contentful.com"
+		},
+		{
+			"key": "preview_url",
+			"value": "https://preview.contentful.com"
+		},
+		{
+			"key": "cma_url",
+			"value": "https://api.contentful.com"
+		},
+		{
+			"key": "image_url",
+			"value": "https://images.ctfassets.net"
+		},
+		{
+			"key": "entry_id",
+			"value": "2AW6mOI4a0hKnUgLX9xwdi"
+		},
+		{
+			"key": "content_type",
+			"value": "componentCardCollection"
+		},
+		{
+			"key": "asset_id",
+			"value": "6DqrmNUV3yAot5DhfzXV5n"
+		},
+		{
+			"key": "image_token",
+			"value": "10d8f4d2efaa7d4b8c911f38a957c1e8"
+		},
+		{
+			"key": "graphql_url",
+			"value": "https://graphql.contentful.com\n"
+		}
+	]
+}
